@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+import subprocess
+
+song_name = input('Please Enter Song Name: ')
+
+subprocess.run([
+    "yt-dlp", f"ytsearch1:{song_name}", "-f", "bestaudio",
+    "--extract-audio", "--audio-format", "mp3",
+    "--embed-thumbnail", "--add-metadata"
+])
+
+
